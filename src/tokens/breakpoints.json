@@ -1,0 +1,35 @@
+{
+    "name": "Breakpoints",
+    "tokens": [
+        {
+            "name": "Small",
+            "id": "breakpoint-small",
+            "value": 480,
+            "type": "breakpoint"
+        },
+        {
+            "name": "Medium",
+            "id": "breakpoint-medium",
+            "value": 768,
+            "type": "breakpoint"
+        },
+        {
+            "name": "Large",
+            "id": "breakpoint-large",
+            "value": 992,
+            "type": "breakpoint"
+        },
+        {
+            "name": "Extra Large",
+            "id": "breakpoint-extra-large",
+            "value": 1200,
+            "type": "breakpoint"
+        },
+        {
+            "name": "Roundboi",
+            "id": "breakpoint-roundboi",
+            "value": 1200,
+            "type": "breakpoint"
+        }
+    ]
+}

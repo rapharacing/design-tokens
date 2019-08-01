@@ -1,0 +1,29 @@
+{
+    "name": "Font Family",
+    "tokens": [
+        {
+            "name": "Heading",
+            "id": "font-heading",
+            "value": "'Rapha Sans Condensed', sans-serif",
+            "type": "font-family"
+        },
+        {
+            "name": "Body",
+            "id": "font-body",
+            "value": "'Rapha Serif Text', serif",
+            "type": "font-family"
+        },
+        {
+            "name": "Large",
+            "id": "font-body-large",
+            "value": "'Rapha Serif Head', serif",
+            "type": "font-family"
+        },
+        {
+            "name": "numerals",
+            "id": "font-numerals",
+            "value": "'Rapha Sans Numerals', sans-serif",
+            "type": "font-family"
+        }
+    ]
+}

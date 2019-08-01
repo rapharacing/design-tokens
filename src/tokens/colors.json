@@ -1,0 +1,96 @@
+{
+  "name": "Colors",
+  "description": "These are the colors we use at Rapha.",
+  "tokens": [
+    {
+      "name": "White",
+      "id": "color-white",
+      "value": "#FFFFFF",
+      "type": "color"
+    },
+    {
+      "name": "Black",
+      "id": "color-black",
+      "value": "#000000",
+      "type": "color"
+    },
+    {
+      "name": "Grey 1",
+      "id": "color-grey-1",
+      "value": "#FCFCFC",
+      "type": "color"
+    },
+    {
+      "name": "Grey 3",
+      "id": "color-grey-3",
+      "value": "#F9F9F9",
+      "type": "color"
+    },
+    {
+      "name": "Grey 5",
+      "id": "color-grey-5",
+      "value": "#f2f2f2",
+      "type": "color"
+    },
+    {
+      "name": "Grey 15",
+      "id": "color-grey-15",
+      "value": "#DDDDDD",
+      "type": "color"
+    },
+    {
+      "name": "Grey 20",
+      "id": "color-grey-20",
+      "value": "#CCCCCC",
+      "type": "color"
+    },
+    {
+      "name": "Grey 40",
+      "id": "color-grey-40",
+      "value": "#999999",
+      "type": "color"
+    },
+    {
+      "name": "Pink",
+      "id": "color-pink",
+      "value": "#F67599",
+      "type": "color"
+    },
+    {
+      "name": "Available",
+      "id": "color-available",
+      "value": "#7ED321",
+      "type": "color"
+    },
+    {
+      "name": "Unavailable",
+      "id": "color-unavailable",
+      "value": "#F00",
+      "type": "color"
+    },
+    {
+      "name": "Custom Button Gradient",
+      "id": "color-custom-button-gradient",
+      "value": "linear-gradient(90deg, #398BA7 0%, #E1666F 40%, #E1666F 60%, #E57A07 100%)",
+      "type": "color"
+    },
+    {
+      "name": "Custom Button Hover Gradient",
+      "id": "color-custom-button-hover-gradient",
+      "value": "linear-gradient(90deg, #B27A89 0%, #E46F78 40%, #E46F78 60%, #E67559 100%)",
+      "type": "color"
+    },
+    {
+      "name": "Custom Font Gradient",
+      "id": "color-custom-font-gradient",
+      "value": "linear-gradient(90deg, #907687 0%, #E1666F 40%, #E1666F 60%, #E36E43 100%)",
+      "type": "color"
+    },
+    {
+      "name": "Viking",
+      "id": "color-viking",
+      "value": "#5DC0D6",
+      "type": "color"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Letter Spacing",
+    "tokens": [
+        {
+            "name": "Heading",
+            "id": "letter-spacing-heading",
+            "value": "0.4px",
+            "type": "letter-spacing"
+        },
+        {
+            "name": "Normal",
+            "id": "letter-spacing-normal",
+            "value": "normal",
+            "type": "letter-spacing"
+        },
+        {
+            "name": "Numeral",
+            "id": "letter-spacing-numeral",
+            "value": "-2px",
+            "type": "letter-spacing"
+        }
+    ]
+}

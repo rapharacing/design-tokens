@@ -1,0 +1,59 @@
+{
+    "name": "Font Weights",
+    "tokens": [
+        {
+            "name": "Thin",
+            "id": "font-weight-thin",
+            "value": 100,
+            "type": "font-weight"
+        },
+        {
+            "name": "Extra Light",
+            "id": "font-weight-extra-light",
+            "value": 200,
+            "type": "font-weight"
+        },
+        {
+            "name": "Light",
+            "id": "font-weight-light",
+            "value": 300,
+            "type": "font-weight"
+        },
+        {
+            "name": "Normal",
+            "id": "font-weight-normal",
+            "value": 400,
+            "type": "font-weight"
+        },
+        {
+            "name": "Mediun",
+            "id": "font-weight-medium",
+            "value": 500,
+            "type": "font-weight"
+        },
+        {
+            "name": "Semi Bold",
+            "id": "font-weight-semi-bold",
+            "value": 600,
+            "type": "font-weight"
+        },
+        {
+            "name": "Bold",
+            "id": "font-weight-bold",
+            "value": 700,
+            "type": "font-weight"
+        },
+        {
+            "name": "Extra Bold",
+            "id": "font-weight-extra-bold",
+            "value": 800,
+            "type": "font-weight"
+        },
+        {
+            "name": "Black",
+            "id": "font-weight-black",
+            "value": 900,
+            "type": "font-weight"
+        }
+    ]
+}
