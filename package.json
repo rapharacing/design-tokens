@@ -1,24 +1,23 @@
 {
-  "name": "@rapha/design-tokens",
+  "name": "@rapharacing/design-tokens",
   "version": "1.0.1",
-  "description": "Design tokens for all Rapha Racing digital products",
+  "description": "Design Tokens for the Rapha Design System",
   "author": "Rapha Racing",
-  "license": "MIT",
-  "main": "./dist/javascript/index.js",
+  "license": "ISC",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rapharacing/rapha-design-tokens"
+    "url": "git+https://github.com/rapharacing/design-tokens.git"
   },
   "keywords": [
     "rapha",
-    "ui",
     "design",
     "tokens"
   ],
   "scripts": {
     "clean": "rimraf dist",
     "build": "node src",
-    "prepublish": "yarn run clean && yarn run build"
+    "postinstall": "yarn run clean && yarn run build"
   },
   "dependencies": {
     "fs-extra": "^7.0.1",
@@ -26,14 +25,16 @@
     "lodash": "^4.17.15",
     "rimraf": "^2.6.3"
   },
-  "devDependencies": {},
   "files": [
     "dist",
     "src"
   ],
-  "bit": {
-    "env": {},
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+  "bugs": {
+    "url": "https://github.com/rapharacing/design-tokens/issues"
+  },
+  "homepage": "https://github.com/rapharacing/design-tokens#readme",
+  "publishConfig": {
+    "access": "public",
+    "@rapharacing:registry": "https://registry.npmjs.org"
   }
 }

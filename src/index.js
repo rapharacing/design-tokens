@@ -3,8 +3,7 @@ const glob = require('glob');
 const fs = require('fs-extra');
 const _ = require('lodash');
 
-const convertToCjs = require('./converters/cjs');
-const convertToEs = require('./converters/es');
+const convertToCommonJS = require('./converters/common');
 const convertToScss = require('./converters/scss');
 
 const config = {
@@ -21,33 +20,28 @@ const processTokens = async (tokenPath = config.tokenPath) => {
 
     const contents = {
         cjs: [],
-        es: [],
-        scss: [],
+        scss: []
     };
 
     _.forEach(files, file => {
         const json = JSON.parse(fs.readFileSync(file).toString());
 
-        const cjs = _.trim(_.reduce(json.tokens, convertToCjs, ''));
-        const es = _.trim(_.reduce(json.tokens, convertToEs, ''));
+        const cjs = _.trim(_.reduce(json.tokens, convertToCommonJS, ''));
         const scss = _.trim(_.reduce(json.tokens, convertToScss, ''));
 
         contents.cjs.push(cjs);
-        contents.es.push(es);
         contents.scss.push(scss);
     });
 
     return({
         cjs: contents.cjs.join('\n'),
-        es: contents.es.join('\n'),
         scss: contents.scss.join('\n')
     });
 };
 
 const saveDistributionFiles = (tokens, outputDirectory = path.resolve(__dirname, config.outputDirectory)) => {
-    fs.outputFileSync(`${outputDirectory}/javascript/index.js`, tokens.cjs);
-    fs.outputFileSync(`${outputDirectory}/javascript/index.es.js`, tokens.es);
-    fs.outputFileSync(`${outputDirectory}/scss/_index.scss`, tokens.scss);
+    fs.outputFileSync(`${outputDirectory}/index.js`, tokens.cjs);
+    fs.outputFileSync(`${outputDirectory}/_index.scss`, tokens.scss);
 };
 
 createTokens = async (tokenPath = config.tokenPath) => {
