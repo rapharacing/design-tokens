@@ -1,7 +1,7 @@
 {
   "name": "@rapharacing/design-tokens",
   "version": "1.0.0",
-  "description": "Design tokens for all Rapha Racing digital products",
+  "description": "Design Tokens for the Rapha Design System",
   "author": "Rapha Racing",
   "license": "ISC",
   "main": "./dist/index.js",
@@ -11,7 +11,6 @@
   },
   "keywords": [
     "rapha",
-    "ui",
     "design",
     "tokens"
   ],
@@ -35,6 +34,7 @@
   },
   "homepage": "https://github.com/rapharacing/design-tokens#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public",
+    "@rapharacing:registry": "https://registry.npmjs.org"
   }
 }
