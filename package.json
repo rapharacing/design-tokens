@@ -1,9 +1,9 @@
 {
   "name": "@rapharacing/design-tokens",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Design Tokens for the Rapha Design System",
   "author": "Rapha Racing",
-  "license": "ISC",
+  "license": "MIT",
   "main": "./dist/index.js",
   "repository": {
     "type": "git",
@@ -15,9 +15,12 @@
     "tokens"
   ],
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "node src",
-    "postinstall": "yarn run clean && yarn run build"
+    "clean-dist": "rimraf dist",
+    "clean-es6": "rimraf es",
+    "compile-es6": "babel ./src --out-dir es",
+    "build-es6": "node ./es",
+    "build": "npm-run-all clean-dist compile-es6 build-es6 clean-es6",
+    "postinstall": "npm-run-all build"
   },
   "dependencies": {
     "fs-extra": "^7.0.1",
@@ -36,5 +39,13 @@
   "publishConfig": {
     "access": "public",
     "@rapharacing:registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "npm-run-all": "^4.1.5",
+    "regenerator-runtime": "^0.13.3"
   }
 }
