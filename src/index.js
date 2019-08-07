@@ -1,18 +1,16 @@
-const path = require('path');
-const glob = require('glob');
-const fs = require('fs-extra');
-const _ = require('lodash');
+import regeneratorRuntime from "regenerator-runtime";
 
-const convertToCommonJS = require('./converters/common');
-const convertToScss = require('./converters/scss');
+import path from 'path';
+import glob from 'glob';
+import fs from 'fs-extra';
+import _ from 'lodash';
+
+import convertToCommonJS from './converters/common';
+import convertToScss from './converters/scss';
 
 const config = {
     outputDirectory: '../dist',
-    tokenPath: path.resolve(__dirname, './tokens/*.json')
-};
-
-const clean = (outputDirectory = config.outputDirectory) => {
-    fs.removeSync(outputDirectory)
+    tokenPath: './tokens/*.json'
 };
 
 const processTokens = async (tokenPath = config.tokenPath) => {
@@ -44,7 +42,7 @@ const saveDistributionFiles = (tokens, outputDirectory = path.resolve(__dirname,
     fs.outputFileSync(`${outputDirectory}/_index.scss`, tokens.scss);
 };
 
-createTokens = async (tokenPath = config.tokenPath) => {
+const createTokens = async (tokenPath = config.tokenPath) => {
     await processTokens(tokenPath)
         .then(tokens => {
             saveDistributionFiles(tokens);
@@ -54,10 +52,6 @@ createTokens = async (tokenPath = config.tokenPath) => {
         }) 
 }
 
-clean();
-createTokens();
-
-module.exports = {
-    clean,
-    createTokens
-};
+(() => {
+    createTokens();
+})();
