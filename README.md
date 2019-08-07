@@ -2,7 +2,7 @@
 
 <h3 align="center">Breakpoints, Colors and Typography for all platforms</h3>
 
-<p align="center"><em>JavaScript · JSON · SCSS · Sketch</em></p>
+<p align="center"><em>JavaScript · JSON · SCSS</em></p>
 
 [![MIT License][license-image]][license-url]
 
@@ -68,4 +68,4 @@ a {
 Design tokens are freely distributable under the terms of the [MIT license](https://github.com/rapharacing/design-tokens/blob/develop/Licence).
 
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
-[license-url]: https://github.com/moment/moment/blob/develop/LICENSE
+[license-url]: https://github.com/moment/moment/blob/develop/LICENSE.md
