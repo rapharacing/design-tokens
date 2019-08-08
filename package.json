@@ -1,6 +1,6 @@
 {
   "name": "@rapharacing/design-tokens",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Design Tokens for the Rapha Design System",
   "author": "Rapha Racing",
   "license": "MIT",
@@ -19,8 +19,7 @@
     "clean-es6": "rimraf es",
     "compile-es6": "babel ./src --out-dir es",
     "build-es6": "node ./es",
-    "build": "npm-run-all clean-dist compile-es6 build-es6 clean-es6",
-    "postinstall": "npm-run-all build"
+    "build": "npm-run-all clean-dist compile-es6 build-es6 clean-es6"
   },
   "dependencies": {
     "fs-extra": "^7.0.1",
