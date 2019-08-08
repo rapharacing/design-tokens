@@ -1,4 +1,4 @@
-const expandHex = require('./expandHex');
+import expandHex from './expandHex';
 
 const hexToRgba = (hex, opacity = 100) => {
   hex = hex.replace('#', '');
@@ -15,4 +15,4 @@ const hexToRgba = (hex, opacity = 100) => {
   )`
 };
 
-module.exports = hexToRgba;
+export default hexToRgba;

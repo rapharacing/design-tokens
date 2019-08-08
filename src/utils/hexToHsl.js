@@ -1,6 +1,20 @@
-const expandHex = require('./expandHex');
+import expandHex from './expandHex';
 
 // https://en.wikipedia.org/wiki/Hue#Computing_hue_from_RGB
+
+const hexToRgb = hex => {
+    hex = hex.replace('#', '');
+
+    if (hex.length === 3) {
+      hex = expandHex(hex);
+    }
+
+    return [
+        `${parseInt(hex.substring(0, 2), 16)}`,
+        `${parseInt(hex.substring(2, 4), 16)}`,
+        `${parseInt(hex.substring(4, 6), 16)}`,
+    ]
+};
 
 const hexToHsl = hex => {
     const rgb = hexToRgb(hex);
@@ -10,9 +24,9 @@ const hexToHsl = hex => {
     const max = Math.max(r, g, b);
     const min = Math.min(r, g, b);
     
+    let s, d;
     let h = s = 0;
     let l = (max + min) / 2;
-    let d;
 
     if (min !== max) {
         d = max - min;
@@ -34,18 +48,4 @@ const hexToHsl = hex => {
     return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
 };
 
-const hexToRgb = hex => {
-    hex = hex.replace('#', '');
-
-    if (hex.length === 3) {
-      hex = expandHex(hex);
-    }
-
-    return [
-        `${parseInt(hex.substring(0, 2), 16)}`,
-        `${parseInt(hex.substring(2, 4), 16)}`,
-        `${parseInt(hex.substring(4, 6), 16)}`,
-    ]
-};
-
-module.exports = hexToHsl;
+export default hexToHsl;

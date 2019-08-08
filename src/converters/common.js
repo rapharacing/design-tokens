@@ -1,5 +1,5 @@
-const _ = require('lodash');
-const hexToHsl = require('../utils/hexToHsl');
+import _ from 'lodash';
+import hexToHsl from '../utils/hexToHsl';
 
 const generateComment = (description, isDeprecated) => {
     const comments = [];
@@ -35,4 +35,4 @@ const toCJS = (memo, { id, value, description, deprecated }) => {
     return `${memo}${comment}\nexports.${formattedName} = ${formattedValue};`;
 };
 
-module.exports = toCJS;
+export default toCJS;
